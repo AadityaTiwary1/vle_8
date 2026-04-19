@@ -15,12 +15,7 @@ spec:
         version: blue
     spec:
       containers:
-      - name: app
+      - name: nginx
         image: nginx
-        volumeMounts:
-        - name: html-volume
-          mountPath: /usr/share/nginx/html
-      volumes:
-      - name: html-volume
-        hostPath:
-          path: /home/ubuntu/vle_8
+        ports:
+        - containerPort: 80
